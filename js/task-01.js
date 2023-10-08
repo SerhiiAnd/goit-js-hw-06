@@ -4,8 +4,8 @@ const categoriesItem = categoriesList.querySelectorAll(".item");
 console.log("Number of categories:", categoriesItem.length);
 
 categoriesItem.forEach((item) => {
-  const categoryTitle = item.querySelector("h2").textContent;
-  const categoryElements = item.querySelectorAll("li").length;
+  const categoryTitle = item.firstElementChild.textContent;
+  const categoryElements = item.lastElementChild.children.length;
   console.log("Category:", categoryTitle);
   console.log("Elements:", categoryElements);
 });
